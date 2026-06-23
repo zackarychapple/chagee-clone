@@ -10,8 +10,8 @@
     "typecheck": "tsc -b"
   },
   "zephyr:dependencies": {
-    "brandRemote": "-chagee-brand-remote.chagee.zack-chapple@latest",
-    "menuRemote": "-chagee-menu-remote.chagee.zack-chapple@latest",
-    "growthRemote": "-chagee-growth-remote.chagee.zack-chapple@latest"
+    "brandRemote": "-chagee-brand-remote.chagee-clone.zackarychapple@latest",
+    "menuRemote": "-chagee-menu-remote.chagee-clone.zackarychapple@latest",
+    "growthRemote": "-chagee-growth-remote.chagee-clone.zackarychapple@latest"
   }
 }
