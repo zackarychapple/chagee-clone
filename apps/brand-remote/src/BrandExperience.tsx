@@ -10,8 +10,8 @@ const heroSlides = [
   {
     image: kampungHero,
     eyebrow: "CHAGEE TOGETHER",
-    title: "CHAGEE Malaysia",
-    description: "Oriental tea craft, Malaysian gatherings, and a brighter everyday ritual.",
+    title: "CHAGEE USA",
+    description: "Oriental tea craft, USA gatherings, and a brighter everyday ritual.",
   },
   {
     image: burdenFreeHero,

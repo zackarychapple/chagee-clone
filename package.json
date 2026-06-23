@@ -13,7 +13,7 @@
     "zephyr:deploy:menu": "ZEPHYR_DEPLOY=true npm run build -w @chagee/menu-remote",
     "zephyr:deploy:growth": "ZEPHYR_DEPLOY=true npm run build -w @chagee/growth-remote",
     "zephyr:deploy:shell": "ZEPHYR_DEPLOY=true npm run build -w @chagee/shell",
-    "zephyr:deploy": "node scripts/deploy-zephyr.mjs",
+    "zephyr:deploy": "npm run zephyr:deploy:brand && npm run zephyr:deploy:menu && npm run zephyr:deploy:growth && npm run zephyr:deploy:shell",
     "preview": "concurrently -k -n brand,menu,growth,shell -c '#8a1f2d,#2f6b4f,#b5833b,#111111' \"npm run preview -w @chagee/brand-remote\" \"npm run preview -w @chagee/menu-remote\" \"npm run preview -w @chagee/growth-remote\" \"npm run preview -w @chagee/shell\"",
     "typecheck": "npm run typecheck --workspaces"
   },
