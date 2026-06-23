@@ -1,0 +1,248 @@
+:root {
+  color: #1f1714;
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  letter-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.growth-section {
+  background: #102b57;
+  color: #fffdf8;
+  display: grid;
+  grid-template-columns: minmax(320px, 0.92fr) minmax(0, 1.08fr);
+  min-height: 76vh;
+}
+
+.growth-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(56px, 8vw, 128px);
+}
+
+.growth-kicker {
+  color: #e7c16f;
+  font-size: 0.84rem;
+  font-weight: 850;
+  margin: 0 0 18px;
+  text-transform: uppercase;
+}
+
+.growth-copy h2,
+.halal-copy h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.25rem, 5vw, 5.55rem);
+  font-weight: 500;
+  line-height: 1.04;
+  margin: 0;
+  overflow-wrap: break-word;
+}
+
+.growth-copy > p:not(.growth-kicker),
+.halal-copy > p:not(.growth-kicker) {
+  color: rgba(255, 253, 248, 0.78);
+  font-size: clamp(1rem, 1.55vw, 1.18rem);
+  line-height: 1.82;
+  margin: 28px 0 0;
+  max-width: 620px;
+}
+
+.growth-stats {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 42px;
+}
+
+.growth-stats span {
+  border-left: 1px solid rgba(231, 193, 111, 0.42);
+  color: rgba(255, 253, 248, 0.74);
+  display: flex;
+  flex-direction: column;
+  font-size: 0.82rem;
+  gap: 8px;
+  padding-left: 14px;
+  text-transform: uppercase;
+}
+
+.growth-stats strong {
+  color: #e7c16f;
+  font-size: clamp(1.3rem, 2.3vw, 2rem);
+}
+
+.growth-link {
+  align-items: center;
+  border: 1px solid rgba(255, 253, 248, 0.72);
+  border-radius: 999px;
+  display: inline-flex;
+  font-size: 0.94rem;
+  font-weight: 800;
+  gap: 10px;
+  margin-top: 36px;
+  padding: 13px 20px;
+  width: fit-content;
+}
+
+.growth-link:hover,
+.growth-link:focus-visible {
+  background: #fffdf8;
+  color: #102b57;
+}
+
+.growth-media {
+  min-height: 620px;
+  overflow: hidden;
+  position: relative;
+}
+
+.growth-media img {
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+}
+
+.growth-pins {
+  align-items: center;
+  bottom: clamp(22px, 4vw, 44px);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  left: clamp(20px, 4vw, 52px);
+  position: absolute;
+  right: clamp(20px, 4vw, 52px);
+}
+
+.growth-pins span {
+  align-items: center;
+  background: rgba(255, 253, 248, 0.92);
+  border-radius: 999px;
+  color: #102b57;
+  display: inline-flex;
+  font-size: 0.9rem;
+  font-weight: 850;
+  gap: 8px;
+  padding: 10px 14px;
+}
+
+.halal-section {
+  background: #fffdf8;
+  color: #1f1714;
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(320px, 1.05fr);
+  min-height: 70vh;
+}
+
+.halal-media {
+  min-height: 560px;
+  overflow: hidden;
+}
+
+.halal-media img {
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+}
+
+.halal-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(56px, 8vw, 128px);
+}
+
+.halal-copy .growth-kicker {
+  color: #8a1f2d;
+}
+
+.halal-copy > p:not(.growth-kicker) {
+  color: rgba(31, 23, 20, 0.72);
+}
+
+.halal-badge {
+  align-items: center;
+  border: 1px solid rgba(138, 31, 45, 0.28);
+  color: #8a1f2d;
+  display: inline-flex;
+  font-size: 0.94rem;
+  font-weight: 850;
+  gap: 10px;
+  margin-top: 34px;
+  padding: 14px 16px;
+  text-transform: uppercase;
+  width: fit-content;
+}
+
+.media-strip {
+  align-items: center;
+  background: #2f6b4f;
+  color: #fffdf8;
+  display: flex;
+  gap: clamp(24px, 6vw, 92px);
+  justify-content: space-between;
+  padding: clamp(34px, 5vw, 64px) clamp(24px, 8vw, 128px);
+}
+
+.media-strip span {
+  font-size: clamp(1.4rem, 3.2vw, 3.2rem);
+  font-weight: 850;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.media-strip p {
+  font-size: clamp(1rem, 1.5vw, 1.18rem);
+  line-height: 1.6;
+  margin: 0;
+  max-width: 680px;
+}
+
+@media (max-width: 940px) {
+  .growth-section,
+  .halal-section {
+    grid-template-columns: 1fr;
+  }
+
+  .growth-media {
+    min-height: 70vw;
+  }
+
+  .halal-media {
+    min-height: 80vw;
+  }
+
+  .halal-media {
+    order: 2;
+  }
+}
+
+@media (max-width: 680px) {
+  .growth-copy,
+  .halal-copy {
+    padding: 54px 22px;
+  }
+
+  .growth-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .media-strip {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .media-strip span {
+    white-space: normal;
+  }
+}

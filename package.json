@@ -1,0 +1,47 @@
+{
+  "name": "chagee-federated-clone",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A CHAGEE Malaysia-inspired React/Vite micro-frontend clone using Zephyr Cloud and Module Federation.",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently -k -n brand,menu,growth,shell -c '#8a1f2d,#2f6b4f,#b5833b,#111111' \"npm run dev -w @chagee/brand-remote\" \"npm run dev -w @chagee/menu-remote\" \"npm run dev -w @chagee/growth-remote\" \"npm run dev -w @chagee/shell\"",
+    "build": "npm run build --workspaces",
+    "build:local": "npm run build",
+    "zephyr:build": "ZEPHYR_DEPLOY=true npm run build",
+    "zephyr:deploy:brand": "ZEPHYR_DEPLOY=true npm run build -w @chagee/brand-remote",
+    "zephyr:deploy:menu": "ZEPHYR_DEPLOY=true npm run build -w @chagee/menu-remote",
+    "zephyr:deploy:growth": "ZEPHYR_DEPLOY=true npm run build -w @chagee/growth-remote",
+    "zephyr:deploy:shell": "ZEPHYR_DEPLOY=true npm run build -w @chagee/shell",
+    "zephyr:deploy": "node scripts/deploy-zephyr.mjs",
+    "preview": "concurrently -k -n brand,menu,growth,shell -c '#8a1f2d,#2f6b4f,#b5833b,#111111' \"npm run preview -w @chagee/brand-remote\" \"npm run preview -w @chagee/menu-remote\" \"npm run preview -w @chagee/growth-remote\" \"npm run preview -w @chagee/shell\"",
+    "typecheck": "npm run typecheck --workspaces"
+  },
+  "workspaces": [
+    "apps/*"
+  ],
+  "keywords": [
+    "vite",
+    "react",
+    "module-federation",
+    "zephyr"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@module-federation/vite": "^1.16.10",
+    "lucide-react": "^1.21.0",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "vite-plugin-zephyr": "^1.1.2"
+  },
+  "devDependencies": {
+    "@types/node": "^26.0.0",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.2",
+    "concurrently": "^10.0.3",
+    "typescript": "^5.9.3",
+    "vite": "^8.0.16"
+  }
+}
